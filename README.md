@@ -18,7 +18,7 @@ Just extend `AbstractSpringApplication` class and create your configuration clas
 ```java
 @lombok.Getter
 @lombok.Setter
-public class DemoConfiguration extends KiwiConfiguration {
+public class DemoConfiguration extends io.dropwizard.Configuration {
     @com.fasterxml.jackson.annotation.JsonProperty("myConfigurationElement")
     private String myConfigurationElement = "default value";
 }
