@@ -6,7 +6,7 @@ Introduction
 
 [Dropwizard](http://www.dropwizard.io) is a Java framework for developing ops-friendly, high-performance, RESTful web services.
 
-[Spring](http://projects.spring.io/spring-framework/) is the most popular application development framework for enterprise Java™.
+[Spring 4.3.X](http://projects.spring.io/spring-framework/) is the most popular application development framework for enterprise Java™.
 
 This project provide a simple method for integrating Spring with Dropwizard.
 
