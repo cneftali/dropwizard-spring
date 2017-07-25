@@ -27,10 +27,6 @@ public class DemoConfiguration extends io.dropwizard.Configuration {
 @org.springframework.context.annotation.Configuration
 public class DemoApplication extends fr.cneftali.integrations.dropwizard.spring.AbstractSpringApplication<DemoConfiguration> {
      
-     public DemoApplication() {
-         super();
-     }
-     
      public static void main(final String[] args) throws Exception {
        new DemoApplication().run(args);
      }

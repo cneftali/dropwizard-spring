@@ -1,0 +1,18 @@
+server:
+  registerDefaultExceptionMappers: false
+  applicationConnectors:
+    - type: http
+      port: 0
+  adminConnectors:
+    - type: http
+      port: 0
+  requestLog:
+    appenders: []
+logging:
+  level: ERROR
+  appenders:
+    - type: console
+      threshold: ALL
+      logFormat: "%highlight(%-6level [%date{ISO8601}] [%t]) %cyan(%logger{5}) - requestId=%X{X-Request-Id:-UNDEFINED} correlationId=%X{X-Correlation-Id:-UNDEFINED} - %msg %n"
+      timeZone: UTC
+      target: stdout
