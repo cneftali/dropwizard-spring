@@ -80,6 +80,7 @@ public class SpringBundle<T extends Configuration> implements ConfiguredBundle<T
 
         this.context.setParent(parent);
         this.context.registerShutdownHook();
+        registerModules(configuration, context);
 
         // Initialize Dropwizard environment
         registerManaged(environment, context);
@@ -323,5 +324,10 @@ public class SpringBundle<T extends Configuration> implements ConfiguredBundle<T
         context.getBeanFactory()
                .registerSingleton(MetricRegistry.class.getSimpleName(), environment.metrics());
         log.info("Registering Dropwizard MetricRegistry under name : {}", MetricRegistry.class.getSimpleName());
+    }
+
+    private void registerModules(final T configuration, final AnnotationConfigWebApplicationContext context) {
+        context.register(annotatedClasses.toArray(new Class<?>[annotatedClasses.size()]));
+        context.refresh();
     }
 }
