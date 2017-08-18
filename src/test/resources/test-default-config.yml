@@ -9,10 +9,10 @@ server:
   requestLog:
     appenders: []
 logging:
-  level: ERROR
+  level: INFO
   appenders:
     - type: console
       threshold: ALL
-      logFormat: "%highlight(%-6level [%date{ISO8601}] [%t]) %cyan(%logger{5}) - requestId=%X{X-Request-Id:-UNDEFINED} correlationId=%X{X-Correlation-Id:-UNDEFINED} - %msg %n"
+      logFormat: "%highlight(%-6level [%date{ISO8601}] [%t]) %cyan(%logger{5}) - %msg %n"
       timeZone: UTC
       target: stdout
