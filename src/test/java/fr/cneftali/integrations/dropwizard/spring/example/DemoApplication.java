@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
         "fr.cneftali.integrations.dropwizard.spring.example.resources"})
 public class DemoApplication extends AbstractSpringApplication<DemoConfiguration> {
 
-
     public static void main(final String[] args) throws Exception {
         new DemoApplication().run(args);
     }
